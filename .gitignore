@@ -1,0 +1,60 @@
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# =========================
+# Java / Spring Boot
+# =========================
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# =========================
+# Maven
+# =========================
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.properties
+
+# =========================
+# Logs
+# =========================
+*.log
+
+# =========================
+# IDEs
+# =========================
+## Eclipse
+.project
+.classpath
+.settings/
+
+
+# =========================
+# OS
+# =========================
+
+## Windows
+Thumbs.db
+desktop.ini
+
+
+# =========================
+# Environment variables
+# =========================
+.env
+.env.*
+
+# =========================
+# Spring Boot
+# =========================
+application-local.properties
+application-local.yml
+
+# =========================
+# Docker
+# =========================
+docker-compose.override.yml
+
+# =========================
+# Temporary files
+# =========================
+*.tmp
+*.bak
