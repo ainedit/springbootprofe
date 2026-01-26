@@ -6,5 +6,26 @@
 <body>
 	<h1>Welcome to Our Application!</h1>
 	<p>This is the welcome page served from the static resources.</p>
+	<a href="/calculadora?num1=7&num2=8&operacion=sumar">Calculadora</a>
+	<br>
+	<a href="/calculadora/sumar.do?num1=9&num2=10">Calculadora2</a>
+	<br>
+	<a href="/calculadora/operardto?num1=7&num2=8&operacion=sumar">Calculadora3</a>
+
+	<form action="/calculadora/operarpost" method="post">
+		<br> <label for="num1">Número 1:</label> <input type="text"
+			id="num1" name="num1" required> <br> <label for="num2">Número
+			2:</label> <input type="text" id="num2" name="num2"> <br> <label
+			for="operacion">Operación:</label> <select id="operacion"
+			name="operacion">
+			<option value="sumar">Suma</option>
+			<option value="restar">Resta</option>
+			<option value="multiplicar">Multiplicación</option>
+			<option value="dividir">División</option>
+		</select> <br> <input type="submit" value="Calcular">
+	</form>
+
+
+
 </body>
 </html>
