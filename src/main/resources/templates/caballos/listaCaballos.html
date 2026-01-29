@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Caballos</title>
+    <link rel="stylesheet" th:href="@{/css/estiloMenu.css}">
+</head>
+<body>
+
+<h1>Lista de Caballos</h1>
+
+<div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                <th>Marcar</th>
+                <th>Nombre</th>
+                <th>Edad</th>
+                <th>Dorsal</th>
+                <th>Peso</th>
+                <th>Velocidad</th>
+                <th>Experiencia</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="caballo : ${caballos}">
+                <td style="text-align:center">
+                    <input type="checkbox"
+                           name="caballosMarcados"
+                           th:value="${caballo.id}">
+                </td>
+                <td th:text="${caballo.nombre}"></td>
+                <td th:text="${caballo.edad}"></td>
+                <td th:text="${caballo.dorsal}"></td>
+                <td th:text="${caballo.peso}"></td>
+                <td th:text="${caballo.velocidad}"></td>
+                <td th:text="${caballo.experiencia}"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Botón Volver ORIGINAL, sin tocar -->
+<a th:href="@{/carreracaballos/inicio}" class="btn-volver btn-izquierda" style="padding-right: 200px">Iniciar Carrera</a>
+<a th:href="@{/carreracaballos/nuevoCaballo}" class="btn-volver btn-derecha" style="padding-right: 200px">Nuevo Caballo</a>
+<a th:href="@{/carreracaballos}" class="btn-volver btn-derecha">Volver</a>
+
+</body>
+</html>
+

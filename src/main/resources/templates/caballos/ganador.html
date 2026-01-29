@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Ganador de la Carrera</title>
+    <link rel="stylesheet" th:href="@{/css/estiloMenu.css}"> <!-- tu hoja de estilos -->
+</head>
+<body>
+    <div class="ganador-card">
+        <h1 class="texto-ganador">
+            🏁 <span th:text="${caballoGanador.nombre}"></span> – Caballo ganador 🏆
+        </h1>
+        <a th:href="@{/menuCarrera}" class="btn-volver">Volver al menú</a>
+    </div>
+</body>
+</html>

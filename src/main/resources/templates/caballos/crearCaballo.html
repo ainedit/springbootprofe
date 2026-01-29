@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Crear Caballo</title>
+<link rel="stylesheet" th:href="@{/css/estiloMenu.css}">
+</head>
+<body>
+	<h1>Registro de Caballo</h1>
+
+	<!-- 	se le pone la ruta del controlador y el objeto que se va a llenar y llamar al metodo guardarCaballo  -->
+	<form th:action="@{/carreracaballos/guardarCaballo}" th:object="${caballo}" method="post">
+
+		<div>
+			<label for="nombre">Nombre:</label> <input type="text" id="nombre"
+				th:field="*{nombre}" placeholder="Ingresa el nombre" required />
+		</div>
+
+
+		<div>
+			<label for="edad">Edad:</label> <input type="number" id="edad"
+				th:field="*{edad}" placeholder="Ingresa la edad" min="14" required />
+		</div>
+
+
+
+		<div>
+			<label for="dorsal">Dorsal:</label> <input type="number" id="dorsal"
+				th:field="*{dorsal}" placeholder="Ingresa el dorsal" min="1" max="25" step="0.1" required />
+
+		</div>
+
+
+		<div>
+			<label for="peso">Peso (kg):</label> <input type="number" id="peso"
+				th:field="*{peso}" placeholder="Ingresa el peso en kg" min="400" step="0.1" required />
+		</div>
+
+		<div>
+			<label for="velocidad">Velocidad (km/h):</label> <input type="number"
+				id="velocidad" th:field="*{velocidad}"
+				placeholder="Ingresa la velocidad en km/h" min="10"  max ="70" step="0.1" required />
+		</div>
+
+
+
+
+		<div>
+			<label for="experiencia">Experiencia (años):</label> <input
+				type="number" id="experiencia" th:field="*{experiencia}"
+				placeholder="Ingresa la experiencia en años" min="0" required />
+		</div>
+
+
+
+		<div>
+
+			<button type="submit">Crear Caballo</button>
+			
+		
+			<p>
+			
+			
+				<span th:text="${mensaje}" style="color: green;"></span>
+			</p>
+			<p>
+				<span th:text="${error}" style="color: green;"></span>
+			</p>
+			
+<!-- 			//llama al metodo no al html -->
+			<a th:href="@{/menuCarrera}" class="btn-volver btn-derecha">Volver</a>
+
+		</div>
+		
+	</form>
+
+
+</body>
+</html>

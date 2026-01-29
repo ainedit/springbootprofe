@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Menú Carrera de Caballos</title>
+<!-- Enlace al CSS externo -->
+<link rel="stylesheet" th:href="@{/css/estiloMenu.css}">
+</head>
+<body>
+	<h1>Menú Carrera de Caballos</h1>
+
+	<!-- Mensaje de error si hay menos de 2 caballos -->
+	<div th:if="${error}" id="mensajeError"
+		style="text-align: center; color: red; font-size: 1.8em; margin-top: 50px;">
+		<span th:text="${error}"></span>
+
+		<script>
+    setTimeout(() => {
+        const mensaje = document.getElementById('mensajeError');
+        if (mensaje) mensaje.style.display = 'none';
+    }, 1000); // desaparece después de 2 segundos
+</script>
+	</div>
+
+	<div class="container">
+		<!-- 	Se usa la ruta partiendo de /menuCarrera porque sino el navegador intenta buscar /crearCabballo directamente -->
+		<!-- 	 y no lo encuentra -->
+		<!-- / para ruta abasoluta y evitar concatenar la url -->
+		<a class="card" th:href="@{/menuCarrera/crearCaballo}">Crear
+			Caballo</a> <a class="card" th:href="@{/menuCarrera/listarCaballo}">Listar
+			Caballos</a> <a class="card" th:href="@{/menuCarrera/empezarCarrera}">EmpezarCarrera
+			Caballo </a> <a class="card" th:href="@{/menuCarrera/eliminarCaballo}">EliminarCaballo
+		</a>
+	</div>
+</body>
+</html>

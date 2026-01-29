@@ -18,8 +18,6 @@ public class StudentDto {
 		this.curso = curso;
 	}
 
-
-
 	public StudentDto(String nombre, String email, Integer edad, String curso) {
 		super();
 		this.nombre = nombre;

@@ -8,6 +8,6 @@ import es.cursojava.springbootprofe.entities.StudentEntity;
 import es.cursojava.springbootprofe.model.StudentDto;
 
 public interface StudentRepository extends JpaRepository<StudentEntity, Long> {
-	  Optional<StudentDto> findByEmail(String email);
+	  Optional<StudentDto> findByEmailAndName(String email,String name);
 
 }

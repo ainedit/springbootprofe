@@ -1,0 +1,218 @@
+
+@charset "UTF-8";
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin: 40px 0;
+    color: #333;
+}
+
+/* Estilos del menú */
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px;
+}
+
+.card {
+    background-color: #fff;
+    width: 200px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+/* Estilos para el formulario de crear caballo */
+.form-container {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 25px 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+form div {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #555;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+button[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para tablas de la base de datos */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden; /* Para los bordes redondeados */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+thead {
+    background-color: #007BFF;
+    color: white;
+}
+
+thead th {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+tbody tr {
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.3s;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+tbody td {
+    padding: 12px 15px;
+}
+
+/* Botones dentro de las tablas */
+.btn {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    color: white;
+    transition: background-color 0.2s;
+}
+
+.btn-edit {
+    background-color: #28a745;
+}
+
+.btn-edit:hover {
+    background-color: #218838;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+}
+
+.btn-delete:hover {
+    background-color: #c82333;
+}
+.btn-volver {
+    background-color: #28a745; /* verde */
+    color: white;
+    padding: 10px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    position: fixed;       /* fijo en la pantalla */
+    z-index: 1000;         /* para que esté por encima de otros elementos */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Posición específica de cada botón */
+.btn-izquierda {
+    left: 20px;   /* esquina inferior izquierda */
+}
+
+.btn-derecha {
+    right: 20px;  /* esquina inferior derecha */
+}
+.btn-volver:hover {
+    background-color: #218838; /* verde más oscuro al pasar el mouse */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3); /* sombra más grande */
+    cursor: pointer; /* cambia el cursor al pasar sobre el botón */
+}
+
+
+
+/* Wrapper para scroll horizontal si la tabla es muy ancha */
+.table-wrapper {
+    overflow-x: auto;
+}
+
+/* Estilos para la tarjeta del ganador de la carrera */
+.ganador-card {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.texto-ganador {
+    font-size: 3em; /* texto grande */
+    font-weight: bold;
+    margin: 40px 0;
+    color: #333;
+}
+
+/* Botón volver para la página del ganador, reutilizando .btn-volver */
+.ganador-card .btn-volver {
+    position: static; /* no fijo en pantalla, solo debajo del texto */
+    display: inline-block;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+
+
